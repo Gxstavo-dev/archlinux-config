@@ -7,10 +7,6 @@ Respaldo de la configuración de mi instalación de Arch Linux (Hyprland).
 | Ruta | Contenido |
 |---|---|
 | `config/hypr` | Configuración del compositor Hyprland (keybinds, monitor, animaciones) |
-| `config/waybar` | Barra de estado |
-| `config/ags` | Widgets / barra AGS (Astal) — código fuente |
-| `config/quickshell` | Shell con widgets (incluye widget de clima con open-meteo) |
-| `config/rofi` | Launchers, powermenu, applets y temas |
 | `config/nvim` | Configuración de Neovim |
 | `config/ghostty` | Terminal Ghostty |
 | `config/mpv` | Config de mpv |
@@ -52,15 +48,15 @@ cp dotfiles/bash_profile ~/.bash_profile
 cp dotfiles/profile ~/.profile
 ```
 
-> **Nota:** para que los cambios de Hyprland/waybar surtan efecto, reinicia el compositor (por ejemplo `hyprctl reload` para Hyprland) o vuelve a iniciar sesión.
+> **Nota:** para que los cambios de Hyprland surtan efecto, reinicia el compositor (por ejemplo `hyprctl reload` para Hyprland) o vuelve a iniciar sesión.
 
 ### 3. Dependencias
 
 Instala primero los paquetes que usan estas configs (ejemplo):
 
 ```bash
-sudo pacman -S hyprland waybar rofi neovim ghostty mpv btop gtk-engine-murrine
-yay -S astal  # o el paquete que uses para ags
+sudo pacman -S hyprland quickshell rofi neovim ghostty mpv btop gtk-engine-murrine
+yay -S swaybg  # o el paquete que uses para el fondo de pantalla
 ```
 
 Ajusta la lista a tu distribución/gestor de paquetes.
