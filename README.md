@@ -7,6 +7,8 @@ Respaldo de la configuración de mi instalación de Arch Linux (Hyprland).
 | Ruta | Contenido |
 |---|---|
 | `config/hypr` | Configuración del compositor Hyprland (keybinds, monitor, animaciones) |
+| `config/quickshell` | Shell con widgets (incluye widget de clima con open-meteo) |
+| `config/rofi` | Launchers, powermenu, applets y temas |
 | `config/nvim` | Configuración de Neovim |
 | `config/ghostty` | Terminal Ghostty |
 | `config/mpv` | Config de mpv |
@@ -28,6 +30,26 @@ Archivos con secretos o información sensible:
 Revisa con `grep -rniE "api[_-]?key|secret|token|passw" config/` antes de usar cualquier copia si modificas este repo.
 
 ## Cómo restaurar
+
+### Método automático (recomendado)
+
+```bash
+git clone https://github.com/Gxstavo-dev/archlinux-config.git ~/archlinux-config
+cd ~/archlinux-config
+chmod +x setup.sh
+./setup.sh
+```
+
+El script `setup.sh`:
+
+1. Instala las dependencias de los repos oficiales (`pacman`) y de AUR (`yay`, si está disponible)
+2. Hace respaldo de tu configuración actual en `~/.config.bak-<fecha>`
+3. Copia los `config/*` a `~/.config/` y los `dotfiles/*` a tu home
+4. Recarga Hyprland si está corriendo
+
+Si no tienes `yay`, instálalo primero: https://github.com/Jguer/yay
+
+### Método manual
 
 ### 1. Clonar el repo
 
