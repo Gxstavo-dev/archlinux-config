@@ -1,0 +1,11 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 13
+theme = Aizen Dark
+
+window-decoration = false
+gtk-titlebar = false
+
+cursor-style = block
+shell-integration = bash
+
+background-opacity = 0.95

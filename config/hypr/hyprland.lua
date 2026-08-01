@@ -1,0 +1,10 @@
+---@diagnostic disable: undefined-global
+require("modules.monitors")
+require("modules.autostart")
+require("modules.env")
+require("modules.styles")
+require("modules.animations")
+require("modules.variables")
+require("modules.input")
+require("modules.keybinds")
+require("modules.window-rules")
