@@ -42,10 +42,19 @@ chmod +x setup.sh
 
 El script `setup.sh`:
 
-1. Instala las dependencias de los repos oficiales (`pacman`) y de AUR (`yay`, si está disponible)
+1. Instala **todos** los paquetes del sistema desde `pkglist.txt` (190 oficiales) y `aurlist.txt` (26 AUR) — fallback a una lista mínima si no existen
 2. Hace respaldo de tu configuración actual en `~/.config.bak-<fecha>`
 3. Copia los `config/*` a `~/.config/` y los `dotfiles/*` a tu home
 4. Recarga Hyprland si está corriendo
+
+> `pkglist.txt` y `aurlist.txt` se generan con `pacman -Qe` y `pacman -Qm`. Para actualizarlos tras instalar algo nuevo:
+>
+> ```bash
+> cd ~/archlinux-config
+> pacman -Qe | awk '{print $1}' > pkglist.txt
+> pacman -Qm | awk '{print $1}' > aurlist.txt
+> git add -A && git commit -m "update packages" && git push
+> ```
 
 Si no tienes `yay`, instálalo primero: https://github.com/Jguer/yay
 
