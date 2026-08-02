@@ -1,0 +1,56 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Iosevka Nerd Font", sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(18, 18, 24, 0.25);
+    color: #ffffff;
+}
+
+tooltip {
+    background: rgba(20, 20, 25, 0.92);
+    border-radius: 10px;
+}
+
+#clock {
+    padding: 0 16px;
+    font-weight: bold;
+    min-height: 26px;
+}
+
+#network {
+    padding: 0 16px;
+    min-height: 26px;
+}
+
+#modules-center {
+    background: transparent;
+    padding: 0;
+}
+
+#modules-center #custom-brave,
+#modules-center #custom-zed,
+#modules-center #custom-vscode,
+#modules-center #custom-beekeeper,
+#modules-center #custom-claude {
+    background: transparent;
+    border-radius: 8px;
+    margin: 4px 14px;
+    padding: 0 6px;
+    min-height: 20px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: 0.15s;
+}
+
+#modules-center #custom-brave:hover,
+#modules-center #custom-zed:hover,
+#modules-center #custom-vscode:hover,
+#modules-center #custom-beekeeper:hover,
+#modules-center #custom-claude:hover {
+    background: rgba(255, 255, 255, 0.18);
+}

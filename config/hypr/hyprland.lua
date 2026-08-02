@@ -1,5 +1,6 @@
 ---@diagnostic disable: undefined-global
 require("modules.monitors")
+require("modules.plugins")
 require("modules.autostart")
 require("modules.env")
 require("modules.styles")

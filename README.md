@@ -6,15 +6,10 @@ Respaldo de la configuración de mi instalación de Arch Linux (Hyprland).
 
 | Ruta | Contenido |
 |---|---|
-| `config/hypr` | Configuración del compositor Hyprland (keybinds, monitor, animaciones) |
-| `config/quickshell` | Shell con widgets (incluye widget de clima con open-meteo) |
+| `config/hypr` | Configuración del compositor Hyprland en Lua (keybinds, monitor, animaciones, hyprglass) |
+| `config/waybar` | Barra superior waybar |
 | `config/rofi` | Launchers, powermenu, applets y temas |
-| `config/nvim` | Configuración de Neovim |
-| `config/ghostty` | Terminal Ghostty |
-| `config/mpv` | Config de mpv |
-| `config/btop` | Monitor de sistema btop |
-| `config/gtk-3.0` y `config/gtk-4.0` | Temas GTK |
-| `config/yay` | Config de yay (AUR helper) |
+| `config/networkmanager-dmenu` | Menú de red NetworkManager |
 | `config/mimeapps.list` | Aplicaciones por defecto |
 | `dotfiles/bashrc` | Mi `.bashrc` |
 | `dotfiles/bash_profile` | Mi `.bash_profile` |
@@ -42,7 +37,7 @@ chmod +x setup.sh
 
 El script `setup.sh`:
 
-1. Instala **todos** los paquetes del sistema desde `pkglist.txt` (190 oficiales) y `aurlist.txt` (26 AUR) — fallback a una lista mínima si no existen
+1. Instala **todos** los paquetes del sistema desde `pkglist.txt` (75 oficiales) y `aurlist.txt` (9 AUR) — fallback a una lista mínima si no existen
 2. Hace respaldo de tu configuración actual en `~/.config.bak-<fecha>`
 3. Copia los `config/*` a `~/.config/` y los `dotfiles/*` a tu home
 4. Recarga Hyprland si está corriendo
@@ -86,8 +81,7 @@ cp dotfiles/profile ~/.profile
 Instala primero los paquetes que usan estas configs (ejemplo):
 
 ```bash
-sudo pacman -S hyprland quickshell rofi neovim ghostty mpv btop gtk-engine-murrine
-yay -S swaybg  # o el paquete que uses para el fondo de pantalla
+sudo pacman -S hyprland waybar rofi swaybg gtk-engine-murrine
 ```
 
 Ajusta la lista a tu distribución/gestor de paquetes.

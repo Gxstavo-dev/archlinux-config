@@ -1,0 +1,53 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 14,
+    "modules-left": ["clock"],
+    "modules-center": ["custom/brave", "custom/zed", "custom/vscode", "custom/beekeeper", "custom/claude"],
+    "modules-right": ["network"],
+
+    "custom/brave": {
+        "format": "\uf0ac",
+        "tooltip": false,
+        "interval": "once",
+        "on-click": "brave"
+    },
+    "custom/zed": {
+        "format": "\uf120",
+        "tooltip": false,
+        "interval": "once",
+        "on-click": "zeditor"
+    },
+    "custom/vscode": {
+        "format": "\ue70c",
+        "tooltip": false,
+        "interval": "once",
+        "on-click": "code"
+    },
+    "custom/beekeeper": {
+        "format": "\uf1c0",
+        "tooltip": false,
+        "interval": "once",
+        "on-click": "beekeeper-studio"
+    },
+    "custom/claude": {
+        "format": "\uf069",
+        "tooltip": false,
+        "interval": "once",
+        "on-click": "claude-desktop"
+    },
+
+    "network": {
+        "format-wifi": "\uf1eb {signalStrength}%",
+        "format-ethernet": "\uf1eb",
+        "format-disconnected": "⚠ sin red",
+        "on-click": "networkmanager_dmenu",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": false
+    }
+}

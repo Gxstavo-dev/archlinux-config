@@ -18,8 +18,8 @@ hl.config({
     decoration = {
         rounding         = 10,
         rounding_power   = 10,
-        active_opacity   = 1.0,
-        inactive_opacity = 1.0,
+        active_opacity   = 0.88,
+        inactive_opacity = 0.8,
         shadow           = {
             enabled      = true,
             range        = 4,
@@ -67,6 +67,12 @@ hl.config({
 
 hl.layer_rule({
   match = { namespace = "^qs-.*" },
+  blur = true,
+  ignore_alpha = 0.0,
+})
+
+hl.layer_rule({
+  match = { namespace = "^waybar.*" },
   blur = true,
   ignore_alpha = 0.0,
 })
