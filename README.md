@@ -7,9 +7,7 @@ Respaldo de la configuración de mi instalación de Arch Linux (Hyprland).
 | Ruta | Contenido |
 |---|---|
 | `config/hypr` | Configuración del compositor Hyprland en Lua (keybinds, monitor, animaciones, hyprglass) |
-| `config/waybar` | Barra superior waybar |
 | `config/rofi` | Launchers, powermenu, applets y temas |
-| `config/networkmanager-dmenu` | Menú de red NetworkManager |
 | `config/mimeapps.list` | Aplicaciones por defecto |
 | `dotfiles/bashrc` | Mi `.bashrc` |
 | `dotfiles/bash_profile` | Mi `.bash_profile` |
@@ -37,7 +35,7 @@ chmod +x setup.sh
 
 El script `setup.sh`:
 
-1. Instala **todos** los paquetes del sistema desde `pkglist.txt` (75 oficiales) y `aurlist.txt` (9 AUR) — fallback a una lista mínima si no existen
+1. Instala **todos** los paquetes del sistema desde `pkglist.txt` (75 oficiales) y `aurlist.txt` (8 AUR) — fallback a una lista mínima si no existen
 2. Hace respaldo de tu configuración actual en `~/.config.bak-<fecha>`
 3. Copia los `config/*` a `~/.config/` y los `dotfiles/*` a tu home
 4. Recarga Hyprland si está corriendo

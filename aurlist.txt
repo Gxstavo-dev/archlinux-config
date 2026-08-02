@@ -3,7 +3,6 @@ beekeeper-studio-bin
 brave-bin
 claude-desktop
 ghcup-hs-bin
-networkmanager-dmenu-git
 paru
 paru-debug
 visual-studio-code-bin

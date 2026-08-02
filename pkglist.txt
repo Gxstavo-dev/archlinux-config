@@ -16,6 +16,7 @@ efibootmgr
 fastfetch
 ghcup-hs-bin
 git
+github-cli
 grim
 grub
 gst-plugin-pipewire
@@ -33,13 +34,13 @@ mkinitcpio
 nano
 network-manager-applet
 networkmanager
-networkmanager-dmenu-git
 ninja
 noto-fonts
 opencode
 pacman-contrib
 paru
 paru-debug
+pavucontrol
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -62,7 +63,6 @@ visual-studio-code-bin
 vulkan-intel
 vulkan-nouveau
 vulkan-radeon
-waybar
 wget
 wireplumber
 wofi
